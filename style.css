@@ -30,7 +30,7 @@ body{
     padding: 15px;
     float: left;
     margin-right: 200px;
-    margin-left: 10px;
+    margin-left: 10 px;
 }
 
 h1{
@@ -45,7 +45,9 @@ h1{
 }
 
 #Themenfrage{
+    margin-top: -5px;
     padding-left: 30px;
+    font-size: 20px;
 }
 
 #nav{
@@ -63,4 +65,23 @@ li{
     padding: 20px;
     margin-bottom: 10px;
     font-family: 'Josefin Sans', sans-serif;
+}
+
+.erklaerung{
+    padding-left: 50px;
+}
+
+#argumentT{
+    margin-top: 30px;
+    border-spacing: 10px;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+td{
+    background-color: #f4f6f9; 
+    padding: 10px;
+    width: 50%
 }
