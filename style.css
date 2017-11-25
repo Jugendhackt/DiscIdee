@@ -30,7 +30,8 @@ body{
     padding: 25px;
     float: left;
     margin-right: 200px;
-    margin-left: 10 px;
+    margin-left: 10px;
+    margin-bottom: 20px;
     width: 80%;
 }
 
@@ -107,4 +108,9 @@ p{
     margin-left: auto;
     margin-right: auto;
     font-family: 'Josefin Sans', sans-serif;
+}
+
+.addargument{
+    
+
 }
