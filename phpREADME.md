@@ -14,13 +14,13 @@ Fuegt ein Argument mit dem Text "HierKoennteEinWichtiges ArgumentStehen" zum The
 |  getForTopic      |   topicID  |      |   | gibt alle Attribute für ein topic   |
 |    addTopic    |  topic Name   |   topic question   |   |   |
 |    addArgument    |  text   |  topicID    | boolean das aussagt ob pro Argument   |   |
-|    addExample    | text    |   reasonID   |   |   |
 |   addReason     |   text  |    argumentID  |   |   |
+|    addExample    | text    |   reasonID   |   |   |
 |        |     |      |   |   |
 |    removeTopic    |    topicID |      |   |   |
 |    removeArgument    |  argumentID   |      |   |   |
-|     removeExample   |  exampleID   |      |   |   |
 |      removeReason  | reasonID    |      |   |   |
+|     removeExample   |  exampleID   |      |   |   |
 |        |     |      |   |   |
 |        |     |      |   |   |
 |        |     |      |   |   |
