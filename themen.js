@@ -52,7 +52,7 @@ function add_pro_argument() {
       par3: 1,
   },
   success: function( result ) {
-      alert("erfolgreich");
+      alert("erfolgreich"),
   }
 });
 
