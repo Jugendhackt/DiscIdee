@@ -2,7 +2,7 @@ function load_topics() {
     $.ajax({
         url: "handler.php?action=topic",
         success: function (result) {
-            result = JSON.parse(result);
+           
             var Inhalt = $('#Inhalt');
             Inhalt.text('');
             for (i = 0; i < result.length; i++) {
