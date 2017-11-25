@@ -111,6 +111,23 @@ p{
 }
 
 .addargument{
-    
+    margin-top: 20px;
 
+}
+
+.argumente{
+    display: inline-block;
+}
+
+.proarg{
+    float: left;
+}
+.conarg{
+    float: right;
+}
+
+.conarg,.proarg{
+    width: 40%;
+    margin: 20px;
+    display: inline-block;
 }
