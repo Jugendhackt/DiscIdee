@@ -16,7 +16,7 @@ function load_arguments(){
             var proarg1=$('<div>');
             proarg.append(proarg1);
             var argumentname=$('<h1>');
-            argumentname.text(result['Argument'][i]['name']);
+            argumentname.text(result['Argument'][i]['text']);
             proarg1.append(argumentname);
 
         }
