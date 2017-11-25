@@ -29,7 +29,7 @@ body{
     background-color: white;
     padding: 15px;
     float: left;
-   /* margin-right: 170px; */
+    margin-right: 170px;
 }
 
 h1{
@@ -48,5 +48,10 @@ h1{
 }
 
 #nav{
-    float: left;
+    position: absolute;
+    top: 100px;
+    right: 40px;
+    color: white;
+    background-color: #505b6d
+    padding: 10px;
 }
