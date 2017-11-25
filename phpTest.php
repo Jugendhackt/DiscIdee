@@ -1,10 +1,18 @@
 hALLO
 <?php
-error_reporting(E_ALL);
 $pdo = new PDO('sqlite:dataBase.db');
 
 $action = $_GET["action"];
-if($action == "themen"){
+
+function getKey($table,$keyName,$key){
+    $pdo = new PDO('sqlite:dataBase.db');
+    $str = "SELECT * FROM ".$table." WHERE ".$keyName." ='".$key."' ";
+    echo $str;
+    echo "TEST!!";
+    return $pdo->query($str)->fetchAll(PDO::FETCH_ASSOC);
+}
+
+if($action == "topic"){
     echo "test";
     $erg = $pdo->query("SELECT * FROM Topics")->fetchAll(PDO::FETCH_ASSOC);
     
@@ -12,39 +20,40 @@ if($action == "themen"){
     
 }
 
-function getKey($table,$keyName,$key){
-    return $pdo->query("SELECT * FROM "+$table+" WHERE "+$keyName+" ='"+$key+"' ")->fetchAll(PDO::FETCH_ASSOC);
-}
+
 
 if($action == "getForTopic"){
-    $para = $_GET("topicID");
+    
+    $para = $_GET["topicID"];
+    
     $argumentL = getKey("Argument","topicID",$para);
-    foreach($argumentL as $argumentRow){
-        $argumentRow["reason"] = array()
+    echo "<br>--<br>";
+    echo count($argumentL);
+    for($i = 0;$i<count($argumentL);$i = $i+1){
+        $argumentRow = $argumentL[$i];
+        
         $reasonL = getKey("Reason","argumentID",$argumentRow["ID"]);
-        foreach($reasonL as $reasonRow){
-            
-            $exampleL = getKey("Example","reasonID",reasonRow["ID"]);
-            $reasonRow["example"] = exampleL;
-            $argumentRow["reason"][] = $reasonRow;2
+        $argumentL[$i]["reason"] =$reasonL;
+        for($l = 0;$l<count($reasonL);$l = $l+1){
+        //foreach($reasonL as $reasonRow){
+            $reasonRow = $reasonL[$l];
+            $exampleL = getKey("Example","reasonID",$reasonRow["ID"]);
+           $argumentL[$i]["reason"][$l]["example"] = $exampleL;
+             
         }
         
     }
+  /*  echo "<br><br>";
+    var_dump($argumentL);
+    echo "<br><br>";*/
+    echo json_encode($argumentL);
     
     
 }
 
-func
-
-echo "<br>";
 
 
-echo "HAllo!";
 
 
-$erg = $pdo->query("SELECT * FROM Argument");
-foreach($erg as $row){
-    echo $row['ID'];
-}
-echo "s";
+
 ?>
