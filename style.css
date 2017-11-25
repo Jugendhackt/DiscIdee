@@ -64,3 +64,9 @@ li{
     margin-bottom: 10px;
     font-family: 'Josefin Sans', sans-serif;
 }
+
+.button {
+    width: 100px;
+    height: 100px;
+    font-size: 40pt;
+}
