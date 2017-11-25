@@ -1,9 +1,11 @@
 #title {
     font-family: 'Spectral SC', serif;
+    font-size: 20px;
 }
 
 #motto {
     font-family: 'Amatic SC', cursive;
+    font-size: 3m;
 }
 
 .header {
@@ -17,6 +19,13 @@ body{
 }
 
 #inhalt {
+    clear: both;
     background-color: white;
     padding: 15px;
     margin-right: 120px;
+}
+
+h1{
+    font-family: 'Josefin Sans', sans-serif;
+    f
+}
