@@ -15,13 +15,12 @@ function load_arguments() {
             conarg.text('');
             for (i = 0; i < result['Argument'].length; i++) {
                 var arg1 = $('<div>');
-                var isPro=result['Argument'][i]['isPro'];
-               if (isPro==1){
-                proarg.append(arg1);
-               }
-               else {
-                conarg.append(arg1);   
-               }
+                var isPro = result['Argument'][i]['isPro'];
+                if (isPro == 1) {
+                    proarg.append(arg1);
+                } else {
+                    conarg.append(arg1);
+                }
                 var argumentname = $('<h1>');
                 argumentname.text(result['Argument'][i]['text']);
                 arg1.append(argumentname);
@@ -43,18 +42,19 @@ function load_arguments() {
 }
 
 function add_pro_argument() {
-    
-    $.ajax({
-  url: "handler.php?action=addArgument",
-  data: {
-      par1: $("#neuesPro").val(),
-      par2: 2,
-      par3: 1,
-  },
-  success: function( result ) {
-      alert("erfolgreich"),
-  }
-});
 
-    
+    $.ajax({
+        url: "handler.php?action=addArgument",
+        data: {
+            par1: $("#neuesPro").val(),
+            par2: 2,
+            par3: 1,
+        },
+        success: function (result) {
+            alert("erfolgreich");
+            load_arguments();
+        }
+    });
+
+
 }
