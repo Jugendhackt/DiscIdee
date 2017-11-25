@@ -30,7 +30,8 @@ body{
     padding: 25px;
     float: left;
     margin-right: 200px;
-    margin-left: 10 px;
+    margin-left: 10px;
+    margin-bottom: 20px;
     width: 80%;
 }
 
@@ -83,15 +84,17 @@ li{
     margin-top: 30px;
     border-spacing: 10px;
     font-size: 20px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family:  'Quicksand', sans-serif;
     margin-left:auto;
     margin-right:auto;
+    font-size: 18px;
 }
 
 td{
     background-color: #f4f6f9; 
     padding: 10px;
-    width: 50%
+    width: 50%;
+    border-radius: 10px;    
 }
 
 a{
@@ -102,6 +105,7 @@ a{
 p{
     font-family: 'Quicksand', sans-serif;
 }
+
 label {
     display: inline-block;
     width: 100px;
@@ -125,4 +129,61 @@ label {
 }
 #sendbutton {
     margin-top: 20px
+
+}
+.procon{
+    background-color: #f4f6f9;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.procont{
+    margin-top: -10px;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+}
+
+.addargument{
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 15px;
+
+}
+
+.argumente{
+    display: inline-block;
+}
+
+.proarg{
+    float: left;
+    background-color: f4f6f9;
+}
+.conarg{
+    float: right;
+     background-color: f4f6f9;
+}
+
+.conarg,.proarg{
+    width: 40%;
+    margin: 10px;
+    display: inline-block;
+    padding: 20px;
+}
+
+
+
+#ProNeu{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ConNeu{
+    margin-left: auto;
+    margin-right: auto;
 }

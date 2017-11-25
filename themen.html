@@ -1,68 +1,99 @@
 <html>
+
     <head>
-        <title> Thema XY</title>
-        <meta charset="utf-8">
-        <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Quicksand" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    
-    <body>
-        
-        <a href="index.html"><img  id="logo" src="logo.png"></a>
-        
-        <div id="Inhalt">
-            
-            <div class="Themen">
+    <title> Thema XY</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="themen.js"></script>
+    <script src="jquery_1.js"></script>
+</head>
+
+<body onload='load_arguments()'>
+
+    <a href="index.html"><img  id="logo" src="logo.png"></a>
+
+    <div id="Inhalt">
+
+        <div class="Themen">
+
+
             <h1 class="topic">Titelthema</h1>
             <p class="themenfrage">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-            <p class="erklaerung">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>    
-            </div>    
-            
-            <table id="argumentT">
-                <thead>
-                    <tr>
-                        <th>+</th>
-                        <th>-</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet</td>
-                        <td>Contra Argument 1</td>
-                    </tr>
-                    <tr>
-                        <td>Pro Argument 2</td>
-                        <td>Contra Argument 2</td>
-                    </tr>
-                    <tr>
-                        <td>Pro Argument 3</td>
-                        <td>Contra Argument 3</td>
-                    </tr>
-                </tbody>
-            
-            
-            </table>
-            
-        </div>    
-        
-        <div ID="nav">
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    
-                    <a href="impressum.html">Impressum</a>
-                </li>
-            </ul>
+            <p class="erklaerung">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         </div>
-        
-        
-        
-        
-    
-    </body>
+
+        <div class="argumente">
+            <div class="proarg">
+                <h1 class="procont">Pro</h1>
+                <div id="contentpro">
+                <div id="proarg1">
+                    <h1 class="argumentname">Argument1</h1>
+                    <div class="reason">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div id="proarg2">
+                    <h1 class="argumentname">Argument2</h1>
+                    <div class="reason">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                </div>
+                <div id="ProNeu">
+                    <input type="text" placeholder="Gib hier dein neues Pro Argument ein"><button type="submit" action="">Hinzufügen</button>
+                </div>
+
+            </div>
+
+            <div class="conarg">
+                <h1 class="procont">Con</h1>
+
+                <div id="contentcon">
+                    <div id="conarg1">
+                        <h1 class="argumentname">Argument1</h1>
+                        <div class="reason">
+                            <p>t labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                    <div id="conarg2">
+                        <h1 class="argumentname">Argument2</h1>
+                        <div class="reason">
+                            <p>t labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="ConNeu">
+                    <input type="text" placeholder="Gib hier dein neues Con Argument ein"><button type="submit" action="">Hinzufügen</button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+    <div ID="nav">
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="impressum.html">Impressum</a>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+</body>
 
 </html>
