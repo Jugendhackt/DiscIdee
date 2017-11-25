@@ -12,7 +12,7 @@ function getKey($table,$keyName,$key){
 }
 function makeRequest($string){
     global $pdo;
-    echo $string;
+    //echo $string;
     return $pdo->query($string);
     
 }
@@ -31,7 +31,11 @@ if($action == "getForTopic"){
     
     $para = $_GET["par1"];
     
+    $topic = makeRequest("SELECT * FROM Topic WHERE ID='".$para."'")->fetchAll(PDO::FETCH_ASSOC);
+
     $argumentL = getKey("Argument","topicID",$para);
+    
+    
 
     for($i = 0;$i<count($argumentL);$i = $i+1){
         $argumentRow = $argumentL[$i];
@@ -47,8 +51,9 @@ if($action == "getForTopic"){
         }
         
     }
+    $topic["Argument"] = $argumentL;
 
-    echo json_encode($argumentL);
+    echo json_encode($topic);
     
     
 
