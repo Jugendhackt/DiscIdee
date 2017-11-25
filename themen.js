@@ -56,7 +56,7 @@ function add_pro_argument() {
         url: "handler.php?action=addArgument",
         data: {
             par1: $("#neuesPro").val(),
-            par2: 2,
+            par2: $.urlParam('id'),
             par3: 1,
         },
         success: function (result) {
