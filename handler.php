@@ -23,7 +23,7 @@ if($action == "topic"){
 
 if($action == "getForTopic"){
     
-    $para = $_GET["topicID"];
+    $para = $_GET["par1"];
     
     $argumentL = getKey("Argument","topicID",$para);
 
