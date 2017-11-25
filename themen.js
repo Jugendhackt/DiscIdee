@@ -31,7 +31,7 @@ function load_arguments() {
                     conarg.append(arg1);
                 }
                 var argumentname = $('<h1>');
-                argumentname.text(result['Argument'][i]['text']+result['Argument'][i]['ID']);
+                argumentname.text(result['Argument'][i]['text']);
                 
                 var input = $('<input type="text" placeholder="Begründung" id="reason'+result['Argument'][i]['ID']+'">');
                 var button = $('<button type="submit" onclick="addReason('+result['Argument'][i]['ID']+')">');
