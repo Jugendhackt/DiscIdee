@@ -67,3 +67,19 @@ function add_pro_argument() {
 
 
 }
+
+function add_con_argument() {
+     $.ajax({
+        url: "handler.php?action=addArgument",
+        data: {
+            par1: $("#neuesCon").val(),
+            par2: $.urlParam('id'),
+            par3: 0,
+        },
+        success: function (result) {
+            alert("erfolgreich");
+            load_arguments();
+        }
+    });
+
+}
