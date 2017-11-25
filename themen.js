@@ -3,19 +3,22 @@ function load_arguments(){
         url: "handler.php?action=getForTopic&par1=1",
         success: function(result){
             var topic=$('.topic');
-            topic.text(result['name']+ 'Hello');
+            topic.text(result['name']);
             var themenfrage = $('.themenfrage');
-            themenfrage.text(result['question']+'Hello');
+            themenfrage.text(result['question']);
             var erklaerung=$('.erklaerung');
-            erklaerung.text(result['description']+ 'Hello')
+            erklaerung.text(result['description']);
             var proarg=$('.proarg');
             proarg.text('');
             var conarg=$('.conarg');
             conarg.text('');
         for(i=0; i<result['Argument'].length; i++){
             var proarg1=$('<div>');
-            proarg1.text(result[i]['text']);
             proarg.append(proarg1);
+            var argumentname=$('<h1>');
+            argumentname.text(result['Argument'][i]['name']);
+            proarg1.append(argumentname);
+
         }
         },
         error: function () {
