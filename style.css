@@ -5,8 +5,8 @@
 }
 
 #logo{
-    height: 25%;
-    margin left: 20px;
+    margin-top: -40px; 
+    height: 30%;
 }
 
 #motto {
@@ -29,7 +29,8 @@ body{
     background-color: white;
     padding: 15px;
     float: left;
-    margin-right: 170px;
+    margin-right: 200px;
+    margin-left: 10px;
 }
 
 h1{
@@ -48,10 +49,18 @@ h1{
 }
 
 #nav{
-    position: absolute;
+    position: fixed;
     top: 100px;
-    right: 40px;
+    right: 30px;
     color: white;
     background-color: #505b6d
     padding: 10px;
+}
+
+li{
+    display: block;
+    background-color: #837D99;
+    padding: 20px;
+    margin-bottom: 10px;
+    font-family: 'Josefin Sans', sans-serif;
 }
