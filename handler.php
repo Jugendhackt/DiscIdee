@@ -3,6 +3,7 @@
 $pdo = new PDO('sqlite:dataBase.db');
 
 $action = $_GET["action"];
+header('Content-Type: application/json');
 
 function getKey($table,$keyName,$key){
     $pdo = new PDO('sqlite:dataBase.db');
@@ -32,7 +33,7 @@ if($action == "getForTopic"){
         $reasonL = getKey("Reason","argumentID",$argumentRow["ID"]);
         $argumentL[$i]["reason"] =$reasonL;
         for($l = 0;$l<count($reasonL);$l = $l+1){
-        //foreach($reasonL as $reasonRow){
+
             $reasonRow = $reasonL[$l];
             $exampleL = getKey("Example","reasonID",$reasonRow["ID"]);
            $argumentL[$i]["reason"][$l]["example"] = $exampleL;
@@ -40,13 +41,12 @@ if($action == "getForTopic"){
         }
         
     }
-  /*  echo "<br><br>";
-    var_dump($argumentL);
-    echo "<br><br>";*/
+
     echo json_encode($argumentL);
     
     
 }
+
 
 
 
