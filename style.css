@@ -1,12 +1,17 @@
 #title {
     font-family: 'Spectral SC', serif;
-    font-size: 20px;
+    font-size: 30px;
     color: white;
+}
+
+#logo{
+    height: 25%;
+    margin left: 20px;
 }
 
 #motto {
     font-family: 'Amatic SC', cursive;
-    font-size: 3m;
+    font-size: 40px;
     color: white;
 }
 
@@ -21,10 +26,10 @@ body{
 }
 
 #inhalt {
-    clear: both;
     background-color: white;
     padding: 15px;
-    margin-right: 120px;
+    float: left;
+   /* margin-right: 170px; */
 }
 
 h1{
@@ -35,4 +40,13 @@ h1{
 
 .Themen{
     padding-bottom: 15px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#Themenfrage{
+    padding-left: 30px;
+}
+
+#nav{
+    float: left;
 }
