@@ -11,7 +11,7 @@ function load_topics() {
                 Inhalt.append(Themen);
                 var topic = $('<h1>');
                 var link = $('<a>');
-                link.attr("href", "themen.html");
+                link.attr("href", "themen.html?id="+result[i]['ID']);
                 topic.addClass('topic');
                 topic.text(result[i]['name']);
                 link.append(topic);
