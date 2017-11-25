@@ -1,0 +1,24 @@
+#title {
+    font-family: 'Spectral SC', serif;
+}
+
+#motto {
+    font-family: 'Amatic SC', cursive;
+}
+
+#inhalt {
+    margin-top: 60px;
+    background-color: white;
+    padding: 15px;
+    margin-right: 120px;
+}
+
+.header {
+    float:left;
+    padding: 15px;
+}
+
+body{
+    margin: 40px;
+    background-color: eaf2ff;
+}
