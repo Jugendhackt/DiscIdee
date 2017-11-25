@@ -88,3 +88,19 @@ function add_con_argument() {
     });
 
 }
+
+
+
+function addReason(argumentID){
+      $.ajax({
+        url: "handler.php?action=addReason",
+        data: {
+            par1: $("#reason" + argumentID).val(),
+            par2: argumentID,
+        },
+        success: function (result) {
+            load_arguments();
+        }
+    });
+
+}
