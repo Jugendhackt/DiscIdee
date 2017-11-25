@@ -30,7 +30,8 @@ body{
     padding: 25px;
     float: left;
     margin-right: 200px;
-    margin-left: 10 px;
+    margin-left: 10px;
+    margin-bottom: 20px;
     width: 80%;
 }
 
@@ -76,15 +77,17 @@ li{
     margin-top: 30px;
     border-spacing: 10px;
     font-size: 20px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family:  'Quicksand', sans-serif;
     margin-left:auto;
     margin-right:auto;
+    font-size: 18px;
 }
 
 td{
     background-color: #f4f6f9; 
     padding: 10px;
-    width: 50%
+    width: 50%;
+    border-radius: 10px;    
 }
 
 a{
@@ -94,4 +97,20 @@ a{
 
 p{
     font-family: 'Quicksand', sans-serif;
+}
+
+.procon{
+    background-color: #f4f6f9;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.addargument{
+    
+
 }

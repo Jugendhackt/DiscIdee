@@ -10,10 +10,16 @@ function getKey($table,$keyName,$key){
     $str = "SELECT * FROM ".$table." WHERE ".$keyName." ='".$key."' ";
     return $pdo->query($str)->fetchAll(PDO::FETCH_ASSOC);
 }
+function makeRequest($string){
+    global $pdo;
+    echo $string;
+    return $pdo->query($string);
+    
+}
 
 if($action == "topic"){
 
-    $erg = $pdo->query("SELECT * FROM Topics")->fetchAll(PDO::FETCH_ASSOC);
+    $erg = $pdo->query("SELECT * FROM Topic")->fetchAll(PDO::FETCH_ASSOC);
     
     echo json_encode($erg);
     
@@ -45,9 +51,66 @@ if($action == "getForTopic"){
     echo json_encode($argumentL);
     
     
+
 }
 
+//add---------------------------------
+function addRow($table,$name1,$name2,$par1,$par2){
+    /*try{
+    global $pdo;
+    $str = "INSERT INTO ".$table." (".$name1.",".$name2.")
+VALUES (:par1,:par2)";
+    
+    $prep = $pdo ->prepare($str);
+    $prep->bindParam(":par1",$par1);
+    $prep->bindParam(":par2",$par2);
+    
+    /*$parameter1 = $par1;
+    $parameter2 = $par2;
+    
+    $pdo->beginTransaction();
+    $prep->execute();
+    $pdo->commit();
+    $prep->closeCursor();
+    
+    }catch(Exception $e){
+        echo $e->getMessage();
+        
+    }*/
+    
+/*     $str = "INSERT INTO ".$table." (".$name1.",".$name2.")
+VALUES ('".$par1."','".$par2."')";
+    echo makeRequest($str);*/
+    //echo makeRequest("INSERT INTO Topic (name,question) VALUES ('hauptThema','Sehrhehrehwaegfsicher')");
+    
+    //echo $value;
+    /*echo $str;
+    $prep = $pdo->prepare( $str) ;
+    $prep ->execute();
+    echo $value;*/
+    //echo $str;
+    //echo makeRequest($str);
+    //echo "la";
+    global $pdo;
+    $str = "INSERT INTO ".$table." (".$name1.",".$name2.")
+VALUES ('".$par1."','".$par2."')";
+    makeRequest($str);
+}
+if($action == "addTopic"){
+    $par1 = $_GET["par1"];
+    $par2 = $_GET["par2"];
+    
+    $name1 = "name";
+    $name2 = "question";
+    
+    $table = "Topic";
+    
+    addRow($table,$name1,$name2,$par1,$par2);
+    echo "hallo";
+    
+}
 
+//-----------------------------------
 
 
 
