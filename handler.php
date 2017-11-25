@@ -102,6 +102,8 @@ VALUES ('".$par1."','".$par2."')";
 VALUES ('".$par1."','".$par2."')";
     makeRequest($str);
 }
+
+
 if($action == "addTopic"){
     $par1 = $_GET["par1"];
     $par2 = $_GET["par2"];
@@ -115,8 +117,50 @@ if($action == "addTopic"){
     echo "hallo";
     
 }
+if($action == "addArgument"){
+    $par1 = $_GET["par1"];
+    $par2 = $_GET["par2"];
+    $par3 = $_GET["par3"];
+    
+    $name1 = "text";
+    $name2 = "topicID";
+    $name3 = "isPro";
+    
+    $table = "Argument";
+    
+    global $pdo;
+    $str = "INSERT INTO ".$table." (".$name1.",".$name2.",".$name3.")
+VALUES ('".$par1."','".$par2."',".$par3.")";
+    echo $str;
+    makeRequest($str);
+}
 
-//-----------------------------------
+if($action == "addExample"){
+        $par1 = $_GET["par1"];
+    $par2 = $_GET["par2"];
+    
+    $name1 = "text";
+    $name2 = "reasonID";
+    
+    $table = "Example";
+    
+    addRow($table,$name1,$name2,$par1,$par2);
+}
+
+if($action == "addReason"){
+        $par1 = $_GET["par1"];
+    $par2 = $_GET["par2"];
+    
+    $name1 = "text";
+    $name2 = "argumentID";
+    
+    $table = "Reason";
+    
+    addRow($table,$name1,$name2,$par1,$par2);
+}
+
+//-----------------------------------Remove 
+
 
 
 
