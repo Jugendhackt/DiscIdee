@@ -76,15 +76,17 @@ li{
     margin-top: 30px;
     border-spacing: 10px;
     font-size: 20px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family:  'Quicksand', sans-serif;
     margin-left:auto;
     margin-right:auto;
+    font-size: 18px;
 }
 
 td{
     background-color: #f4f6f9; 
     padding: 10px;
-    width: 50%
+    width: 50%;
+    border-radius: 10px;    
 }
 
 a{
@@ -104,4 +106,5 @@ p{
     font-size: 30px;
     margin-left: auto;
     margin-right: auto;
+    font-family: 'Josefin Sans', sans-serif;
 }
