@@ -118,15 +118,21 @@ if($action == "addTopic"){
     
 }
 if($action == "addArgument"){
-        $par1 = $_GET["par1"];
+    $par1 = $_GET["par1"];
     $par2 = $_GET["par2"];
+    $par3 = $_GET["par3"];
     
     $name1 = "text";
     $name2 = "topicID";
+    $name3 = "isPro";
     
     $table = "Argument";
     
-    addRow($table,$name1,$name2,$par1,$par2);
+    global $pdo;
+    $str = "INSERT INTO ".$table." (".$name1.",".$name2.",".$name3.")
+VALUES ('".$par1."','".$par2."',".$par3.")";
+    echo $str;
+    makeRequest($str);
 }
 
 if($action == "addExample"){
@@ -153,7 +159,8 @@ if($action == "addReason"){
     addRow($table,$name1,$name2,$par1,$par2);
 }
 
-//-----------------------------------
+//-----------------------------------Remove 
+
 
 
 
