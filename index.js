@@ -1,6 +1,6 @@
 function load_topics() {
     $.ajax({
-        url: "handler.php?action=getForTopic&par1=1",
+        url: "handler.php?action=topic",
         success: function (result) {
             var Inhalt = $('#Inhalt');
             Inhalt.text('');
