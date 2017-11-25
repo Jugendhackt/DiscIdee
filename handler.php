@@ -32,7 +32,8 @@ if($action == "getForTopic"){
     $para = $_GET["par1"];
     
     $topic = makeRequest("SELECT * FROM Topic WHERE ID='".$para."'")->fetchAll(PDO::FETCH_ASSOC);
-
+    $topic = $topic[0];
+    
     $argumentL = getKey("Argument","topicID",$para);
     
     
