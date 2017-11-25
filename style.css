@@ -5,8 +5,8 @@
 }
 
 #logo{
-    height: 25%;
-    margin left: 20px;
+    margin-top: -40px; 
+    height: 30%;
 }
 
 #motto {
@@ -29,7 +29,8 @@ body{
     background-color: white;
     padding: 15px;
     float: left;
-   /* margin-right: 170px; */
+    margin-right: 200px;
+    margin-left: 10 px;
 }
 
 h1{
@@ -44,9 +45,48 @@ h1{
 }
 
 #Themenfrage{
+    margin-top: -5px;
     padding-left: 30px;
+    font-size: 20px;
 }
 
 #nav{
-    float: left;
+    position: fixed;
+    top: 100px;
+    right: 30px;
+    color: white;
+    background-color: #505b6d
+    padding: 10px;
+}
+
+li{
+    display: block;
+    background-color: #837D99;
+    padding: 20px;
+    margin-bottom: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.erklaerung{
+    padding-left: 50px;
+}
+
+#argumentT{
+    margin-top: 30px;
+    border-spacing: 10px;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+td{
+    background-color: #f4f6f9; 
+    padding: 10px;
+    width: 50%
+}
+
+a{
+    color: white;
+    text-decoration:none;
 }
