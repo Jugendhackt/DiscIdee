@@ -31,7 +31,12 @@ function load_arguments() {
                     conarg.append(arg1);
                 }
                 var argumentname = $('<h1>');
-                argumentname.text(result['Argument'][i]['text']);
+                argumentname.text(result['Argument'][i]['text']+result['Argument'][i]['ID']);
+                
+                var input = $('<input type="text" placeholder="Begründung" id="reason'+result['Argument'][i]['ID']+'">');
+                var button = $('<button type="submit" onclick="addReason('+result['Argument'][i]['ID']+')">');
+                button.text("Hinzufügen")
+                
                 arg1.append(argumentname);
                 var Argument = result['Argument'][i];
                 var reason = $('<div>');
@@ -41,6 +46,8 @@ function load_arguments() {
                     reason1.text(Argument['reason'][x]['text']);
                     reason.append(reason1);
                 }
+                arg1.append(input);
+                arg1.append(button);
             }
         },
         error: function () {
