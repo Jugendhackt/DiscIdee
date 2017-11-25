@@ -90,13 +90,15 @@ td{
     border-radius: 10px;    
 }
 
-a{
-    color: white;
-    text-decoration:none;
-}
+
 
 p{
     font-family: 'Quicksand', sans-serif;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
 }
 
 .procon{

@@ -1,6 +1,7 @@
 function load_arguments() {
     $.ajax({
         url: "handler.php?action=getForTopic&par1=2",
+        dataType: "json",
         success: function (result) {
             var topic = $('.topic');
             topic.text(result['name']);
@@ -39,4 +40,21 @@ function load_arguments() {
         },
 
     });
+}
+
+function add_pro_argument() {
+    
+    $.ajax({
+  url: "handler.php?action=addArgument",
+  data: {
+      par1: $("#neuesPro").val(),
+      par2: 2,
+      par3: 1,
+  },
+  success: function( result ) {
+      alert("erfolgreich");
+  }
+});
+
+    
 }
