@@ -85,3 +85,8 @@ td{
     padding: 10px;
     width: 50%
 }
+
+a{
+    color: white;
+    text-decoration:none;
+}
