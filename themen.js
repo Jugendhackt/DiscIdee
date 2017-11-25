@@ -60,7 +60,6 @@ function add_pro_argument() {
             par3: 1,
         },
         success: function (result) {
-            alert("erfolgreich");
             load_arguments();
         }
     });
@@ -77,7 +76,6 @@ function add_con_argument() {
             par3: 0,
         },
         success: function (result) {
-            alert("erfolgreich");
             load_arguments();
         }
     });
