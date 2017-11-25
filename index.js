@@ -1,7 +1,7 @@
 function load_topics() {
     $.ajax({
         url: "handler.php?action=topic",
-        dataType = "json",
+        dataType :"json",
         success: function (result) {
             var Inhalt = $('#Inhalt');
             Inhalt.text('');
