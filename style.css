@@ -27,10 +27,11 @@ body{
 
 #inhalt {
     background-color: white;
-    padding: 15px;
+    padding: 25px;
     float: left;
     margin-right: 200px;
-    margin-left: 10px;
+    margin-left: 10 px;
+    width: 80%;
 }
 
 h1{
@@ -44,8 +45,10 @@ h1{
     font-family: 'Quicksand', sans-serif;
 }
 
-#Themenfrage{
+.Themenfrage{
+    margin-top: -5px;
     padding-left: 30px;
+    font-size: 20px;
 }
 
 #nav{
@@ -53,7 +56,7 @@ h1{
     top: 100px;
     right: 30px;
     color: white;
-    background-color: #505b6d
+    background-color: #505b6d;
     padding: 10px;
 }
 
@@ -65,8 +68,61 @@ li{
     font-family: 'Josefin Sans', sans-serif;
 }
 
+
 .button {
     width: 100px;
     height: 100px;
     font-size: 40pt;
+}
+
+.erklaerung{
+    padding-left: 50px;
+}
+
+#argumentT{
+    margin-top: 30px;
+    border-spacing: 10px;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+td{
+    background-color: #f4f6f9; 
+    padding: 10px;
+    width: 50%
+}
+
+a{
+    color: white;
+    text-decoration:none;
+}
+
+p{
+    font-family: 'Quicksand', sans-serif;
+}
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+.titel {
+    margin-top: 20px;
+}
+
+.thema {
+    margin-top: 20px;
+}
+.erscheinen {
+    display: none
+}
+.button {
+    color: #505b6d
+}
+.thema {
+    color: #39364A
+}
+#sendbutton {
+    margin-top: 20px
 }
