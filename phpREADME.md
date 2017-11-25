@@ -1,4 +1,4 @@
-Ueber Get wird mindestens die Variable action uebergeben. alle darauffolgenden Variablen werden von par1, par2, ... durchnummeriert
+Über Get wird mindestens die Variable action übergeben. alle darauffolgenden Variablen werden von par1, par2, ... durchnummeriert
 
 Beispiel:
 http://localhost/handler.php?action=addArgument&par1=HierKoennteEinWichtiges ArgumentStehen&par2=1&par3=0
