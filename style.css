@@ -1,24 +1,52 @@
 #title {
     font-family: 'Spectral SC', serif;
+    font-size: 30px;
+    color: white;
+}
+
+#logo{
+    height: 25%;
+    margin left: 20px;
 }
 
 #motto {
     font-family: 'Amatic SC', cursive;
-}
-
-#inhalt {
-    margin-top: 60px;
-    background-color: white;
-    padding: 15px;
-    margin-right: 120px;
+    font-size: 40px;
+    color: white;
 }
 
 .header {
-    float:left;
+    float: left;
     padding: 15px;
 }
 
 body{
-    margin: 40px;
-    background-color: eaf2ff;
+    margin: 60px;
+    background-color: #39364A
+}
+
+#inhalt {
+    background-color: white;
+    padding: 15px;
+    float: left;
+   /* margin-right: 170px; */
+}
+
+h1{
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 5px;
+    
+}
+
+.Themen{
+    padding-bottom: 15px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#Themenfrage{
+    padding-left: 30px;
+}
+
+#nav{
+    float: left;
 }
