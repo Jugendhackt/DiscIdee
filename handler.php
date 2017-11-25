@@ -113,6 +113,7 @@ if($action == "addTopic"){
     
     $table = "Topic";
     
+    
     addRow($table,$name1,$name2,$par1,$par2);
     echo "hallo";
     
@@ -158,12 +159,61 @@ if($action == "addReason"){
     
     addRow($table,$name1,$name2,$par1,$par2);
 }
-
+//--------------------ifRemove
+if($action == "removeTopic"){
+    $par1 = $_GET["par1"];
+    removeTopic($par1);
+}
+if($action == "removeArgument"){
+    $par1 = $_GET["par1"];
+    removeArgument($par1);
+}
+if($action == "removeReason"){
+    $par1 = $_GET["par1"];
+    removeReason($par1);
+}
+if($action == "removeExample"){
+    $par1 = $_GET["par1"];
+    removeExample($par1);
+}
 //-----------------------------------Remove 
 
+function removeTopic($topicID){
+    $topicL = makeRequest("SELECT * FROM Topic WHERE ID='".$topicID."'");//->fetchAll(PDO::FETCH_ASSOC);
+    
+    $argumentL =  makeRequest("SELECT * FROM Argument WHERE topicID='".$topicID."'");//->fetchAll(PDO::FETCH_ASSOC);
+    foreach($argumentL as $line){
+        removeArgument($line["ID"]);
+    }
+    
+    makeRequest("DELETE  FROM Topic WHERE ID='".$topicID."'");
+    
+            
+     
+}
 
+function removeArgument($argumentID){
+    $reasonL =  makeRequest("SELECT * FROM Reason WHERE argumentID='".$argumentID."'");//->fetchAll(PDO::FETCH_ASSOC);
+    foreach($reasonL as $line){
+        removeReason($line["ID"]);
+    }
+    makeRequest("DELETE  FROM Argument WHERE ID='".$argumentID."'");
+}
+function removeReason($reasonID){
+    $exampleL = makeRequest("SELECT * FROM Example WHERE reasonID='".$reasonID."'");//->fetchAll(PDO::FETCH_ASSOC);
+    foreach($exampleL as $line){
+        makeRequest("DELETE  FROM Example WHERE ID='".$line["ID"]."'");
+    }
+    makeRequest("DELETE  FROM Reason WHERE ID='".$reasonID."'");
+}
+function removeExample($exampleID){
+    
+    makeRequest("DELETE  FROM Example WHERE ID='".$exampleID."'");
+}
 
+//--------------------------
 
+//echo "fertig"
 
 
 ?>
