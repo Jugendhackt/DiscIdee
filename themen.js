@@ -81,3 +81,20 @@ function add_con_argument() {
     });
 
 }
+
+
+
+function addReason(argumentID){
+      $.ajax({
+        url: "handler.php?action=addReason",
+        data: {
+            par1: $("#proReason").val(),
+            par2: $.urlParam('id'),
+            par3: 0,
+        },
+        success: function (result) {
+            load_arguments();
+        }
+    });
+
+}
