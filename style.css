@@ -1,11 +1,13 @@
 #title {
     font-family: 'Spectral SC', serif;
     font-size: 20px;
+    color: white;
 }
 
 #motto {
     font-family: 'Amatic SC', cursive;
     font-size: 3m;
+    color: white;
 }
 
 .header {
@@ -15,7 +17,7 @@
 
 body{
     margin: 60px;
-    background-color: eaf2ff;
+    background-color: #39364A
 }
 
 #inhalt {
@@ -27,5 +29,10 @@ body{
 
 h1{
     font-family: 'Josefin Sans', sans-serif;
-    f
+    margin-bottom: 5px;
+    
+}
+
+.Themen{
+    padding-bottom: 15px;
 }
