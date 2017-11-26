@@ -28,7 +28,6 @@ body{
 #inhalt {
     background-color: white;
     padding: 25px;
-    float: left;
     margin-right: 200px;
     margin-left: 10px;
     margin-bottom: 20px;
@@ -57,7 +56,7 @@ h1{
     top: 100px;
     right: 30px;
     color: white;
-    background-color: #505b6d
+    background-color: #505b6d;
     padding: 10px;
 }
 
@@ -67,6 +66,13 @@ li{
     padding: 20px;
     margin-bottom: 10px;
     font-family: 'Josefin Sans', sans-serif;
+}
+
+
+.button {
+    width: 100px;
+    height: 100px;
+    font-size: 40pt;
 }
 
 .erklaerung{
@@ -96,6 +102,41 @@ p{
     font-family: 'Quicksand', sans-serif;
 }
 
+label {
+    display: inline-block;
+    width: 150px;
+}
+
+.titel {
+    margin-top: 20px;
+}
+
+.thema {
+    margin-top: 20px;
+}
+.erscheinen {
+    display: none
+}
+.button {
+    color: #505b6d
+}
+.thema {
+    color: #39364A
+}
+#sendbutton {
+    margin-top: 20px
+
+}
+.procon{
+    background-color: #f4f6f9;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Josefin Sans', sans-serif;
+}
 .link{
     text-decoration: none;
     color: white;
@@ -153,8 +194,10 @@ p{
 
 button{
     margin:10px;
-    background-color: #787A97;
+    background-color: #39364A;
     color: white;
+    border:none;
+    padding:5px;
 }
 
 #contentcon,#contentpro{
@@ -167,8 +210,24 @@ button{
 a{
     text-decoration: none;
     color: black;
+    padding:5px;
 }
 
 #ProNeu,#ConNeu{
     text-align: center; 
+}
+.titlewrapper{
+    background-color:#f4f6f9;
+    margin-left:10px;
+    margin-right:200px;
+    width:74%;
+    padding:30px;
+    font-size:20px;
+}
+label{
+    font-family: 'Quicksand', sans-serif;
+    font-size:20px;
+}
+textarea{
+    font-family: 'Quicksand', sans-serif;
 }

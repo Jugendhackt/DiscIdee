@@ -7,8 +7,13 @@
         <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Quicksand" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
+    <script src="jquery_1.js"></script>
+    <script src="main.js"></script>
+
+        <script src="script.js"></script>
+        
         <script src="index.js"></script>
-        <script src="jquery_1.js"></script>
+
     
     </head>
     
@@ -20,11 +25,39 @@
         <div id="Inhalt">
             
             <div class="Themen">
+
            <a href="themen.html"> <h1 class="topic">Titelthema</h1></a>
             <p class="themenfrage">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-            </div>
 
+            </div>
         </div>
+        <div class="titlewrapper">  
+            <div>
+                <p>
+                Neues Thema erstellen:
+                </p> 
+            </div>
+            <div class="thema">
+                <input type="button" class="button" id="addbutton" value="+">
+            </div>
+            <div class="erscheinen">
+              <div class="titel">
+                <label for="addtitle">
+                    Titel:
+                </label> 
+                <input type="text" id="addtitle">
+            </div>
+            <div>
+                <label for="addtext">
+                    Beschreibung:
+                </label>
+                <textarea id="addtext" rows="4" cols="50"></textarea>
+            </div>
+            <div>
+                <input type="button" id="sendbutton" value="Senden">
+            </div> 
+        </div>      
+            
         
         <div ID="nav">
             <ul>
