@@ -195,8 +195,10 @@ label {
 
 button{
     margin:10px;
-    background-color: #787A97;
+    background-color: #39364A;
     color: white;
+    border:none;
+    padding:5px;
 }
 
 #contentcon,#contentpro{
@@ -209,6 +211,7 @@ button{
 a{
     text-decoration: none;
     color: black;
+    padding:5px;
 }
 
 #ProNeu,#ConNeu{
