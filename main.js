@@ -6,7 +6,12 @@ $(document).ready(function(){
     $("#sendbutton").click(function(){
         alert("Vielen Dank für deine Idee!")
         $.ajax({
-            url:"handler.php?action=addTopic&par1=testtitel&par2=testbeschreibung"
+            url:"handler.php?action=addTopic",
+            data:{par1:$("#addtitle").val(),
+                par2:$("#addtext").val()},
+            success:function(){
+                load_topics();
+            }
         })
     })
 })
