@@ -66,12 +66,7 @@ function load_arguments() {
                 arg1.append(button);
             }
             
-            /*$('#neuesPro').bind('input', function(){
-                startTyping("neuesPro");
-            });
-            $('#neuesCon').bind('input', function(){
-                startTyping("neuesPro");
-            });*/
+
             if(focused != null){
                 $('#'+focused).focus();
                 $('#'+focused).val(text);
@@ -121,21 +116,14 @@ function add_con_argument() {
 function reloadTimer(){
 
     load_arguments();
-    if(focused != null){
-        //alert("§");
 
-        //$('#'+focused).val(text);
-        //alert('#'+focused);
-    }
     
 }
 function startTyping(inputID){
-    //alert(inputID);
+
     focused = inputID;
     text = $("#"+inputID).val();
-    //alert(text);
-    //clearInterval(timer);
-    //alert("start Typing");
+
 }
 
 
