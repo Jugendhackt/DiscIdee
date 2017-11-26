@@ -23,7 +23,7 @@ function start_load_arguments(){
     }
 });*/
 
-   /*$(window).on('scroll', function() {
+   $(window).on('scroll', function() {
         if(focused != null){
             //var element_position = $("#"+focused).offset().top;
             var element_position = $("#"+focused).position().top;
@@ -33,7 +33,7 @@ function start_load_arguments(){
                 focused = null;
             }
         }
-});*/
+});
     
     timer = setInterval(reloadTimer, 1000);
 }
@@ -75,10 +75,10 @@ function load_arguments() {
                 
                 var input = $('<input type="text" placeholder="Begründung" id="reason'+result['Argument'][i]['ID']+'">');
                 
-                /*input.click(function(){
+                input.click(function(){
                     var id = $(this).attr('id');
                     startTyping(id);
-                });*/
+                });
                 input.bind('input', function(){
                     //alert(result['Argument'][i]['ID']);
                     var id = $(this).attr('id');
