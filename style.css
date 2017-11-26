@@ -57,7 +57,7 @@ h1{
     top: 100px;
     right: 30px;
     color: white;
-    background-color: #505b6d
+    background-color: #505b6d;
     padding: 10px;
 }
 
@@ -67,6 +67,13 @@ li{
     padding: 20px;
     margin-bottom: 10px;
     font-family: 'Josefin Sans', sans-serif;
+}
+
+
+.button {
+    width: 100px;
+    height: 100px;
+    font-size: 40pt;
 }
 
 .erklaerung{
@@ -96,6 +103,41 @@ p{
     font-family: 'Quicksand', sans-serif;
 }
 
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+.titel {
+    margin-top: 20px;
+}
+
+.thema {
+    margin-top: 20px;
+}
+.erscheinen {
+    display: none
+}
+.button {
+    color: #505b6d
+}
+.thema {
+    color: #39364A
+}
+#sendbutton {
+    margin-top: 20px
+
+}
+.procon{
+    background-color: #f4f6f9;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Josefin Sans', sans-serif;
+}
 .link{
     text-decoration: none;
     color: white;
