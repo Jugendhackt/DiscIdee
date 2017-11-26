@@ -177,3 +177,7 @@ a{
     text-decoration: none;
     color: black;
 }
+
+#ProNeu, #ConNeu{
+    text-align: center;
+}
