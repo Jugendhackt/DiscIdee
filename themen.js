@@ -3,7 +3,11 @@ var focused = null;
 var text = null;
 function start_load_arguments(){
     load_arguments();
-    timer = setInterval(reloadTimer, 1ram = function(name){
+    timer = setInterval(reloadTimer, 1000);
+}
+
+function load_arguments() {
+    $.urlParam = function(name){
         var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
         if (results==null){
            return null;
@@ -40,9 +44,11 @@ function start_load_arguments(){
                 var input = $('<input type="text" placeholder="Begründung" id="reason'+result['Argument'][i]['ID']+'">');
                 
                 input.bind('input', function(){
+                    //alert(result['Argument'][i]['ID']);
                     var id = $(this).attr('id');
                     startTyping(id);
                 });
+                input.inpu
                 
                 var button = $('<button type="submit" onclick="addReason('+result['Argument'][i]['ID']+')">');
                 button.text("Hinzufügen")
@@ -60,6 +66,12 @@ function start_load_arguments(){
                 arg1.append(button);
             }
             
+            /*$('#neuesPro').bind('input', function(){
+                startTyping("neuesPro");
+            });
+            $('#neuesCon').bind('input', function(){
+                startTyping("neuesPro");
+            });*/
             if(focused != null){
                 $('#'+focused).focus();
                 $('#'+focused).val(text);
@@ -109,12 +121,21 @@ function add_con_argument() {
 function reloadTimer(){
 
     load_arguments();
+    if(focused != null){
+        //alert("§");
 
+        //$('#'+focused).val(text);
+        //alert('#'+focused);
+    }
     
 }
 function startTyping(inputID){
+    //alert(inputID);
     focused = inputID;
     text = $("#"+inputID).val();
+    //alert(text);
+    //clearInterval(timer);
+    //alert("start Typing");
 }
 
 
