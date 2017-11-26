@@ -148,17 +148,8 @@ p{
 
 
 
-#ProNeu{
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
-#ConNeu{
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 
 button{
     margin:10px;
@@ -178,6 +169,6 @@ a{
     color: black;
 }
 
-#ProNeu, #ConNeu{
-    text-align: center;
+#ProNeu,#ConNeu{
+    text-align: center; 
 }
