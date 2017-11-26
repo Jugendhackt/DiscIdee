@@ -1,6 +1,6 @@
 <html>
 
-    <head>
+<head>
     <title> Thema XY</title>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
@@ -11,7 +11,7 @@
     <script src="jquery_1.js"></script>
 </head>
 
-<body onload='load_arguments()'>
+<body onload='start_load_arguments()'>
 
     <a href="index.html"><img  id="logo" src="logo.png"></a>
 
@@ -29,21 +29,23 @@
             <div class="proarg">
                 <h1 class="procont">Pro</h1>
                 <div id="contentpro">
-                <div id="proarg1">
-                    <h1 class="argumentname">Argument1</h1>
-                    <div class="reason">
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    <div id="proarg1">
+                        <h1 class="argumentname">Argument1</h1>
+                        <div class="reason">
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <input type="text" placeholder="Begruendung" id="reason"><button id="" type="submit" onclick="addReasonPro()"></button>
                     </div>
-                </div>
-                <div id="proarg2">
-                    <h1 class="argumentname">Argument2</h1>
-                    <div class="reason">
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+                    <div id="proarg2">
+                        <h1 class="argumentname">Argument2</h1>
+                        <div class="reason">
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                        </div>
                     </div>
-                </div>
                 </div>
                 <div id="ProNeu">
-                    <input type="text" placeholder="Gib hier dein neues Pro Argument ein"><button type="submit" action="">Hinzufügen</button>
+                    <input type="text" placeholder="Argument" id="neuesPro"><button type="submit" onclick="add_pro_argument();addReasonPro()">Hinzufügen</button>
                 </div>
 
             </div>
@@ -57,6 +59,7 @@
                         <div class="reason">
                             <p>t labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                         </div>
+
                     </div>
                     <div id="conarg2">
                         <h1 class="argumentname">Argument2</h1>
@@ -66,7 +69,7 @@
                     </div>
                 </div>
                 <div id="ConNeu">
-                    <input type="text" placeholder="Gib hier dein neues Con Argument ein"><button type="submit" action="">Hinzufügen</button>
+                    <input type="text" placeholder="Argument" id="neuesCon"><button type="submit" onclick="add_con_argument()">Hinzufügen</button>
                 </div>
             </div>
 
@@ -81,10 +84,10 @@
     <div ID="nav">
         <ul>
             <li>
-                <a href="index.html">Home</a>
+                <a class="link" href="index.html">Home</a>
             </li>
             <li>
-                <a href="impressum.html">Impressum</a>
+                <a class="link" href="impressum.html">Impressum</a>
             </li>
         </ul>
     </div>

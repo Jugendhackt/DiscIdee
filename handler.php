@@ -16,6 +16,9 @@ function makeRequest($string){
     return $pdo->query($string);
     
 }
+function responsSucsess(){
+    echo json_encode(true);
+}
 
 if($action == "topic"){
 
@@ -115,7 +118,7 @@ if($action == "addTopic"){
     
     
     addRow($table,$name1,$name2,$par1,$par2);
-    echo "hallo";
+    responsSucsess();
     
 }
 if($action == "addArgument"){
@@ -132,8 +135,9 @@ if($action == "addArgument"){
     global $pdo;
     $str = "INSERT INTO ".$table." (".$name1.",".$name2.",".$name3.")
 VALUES ('".$par1."','".$par2."',".$par3.")";
-    echo $str;
+    
     makeRequest($str);
+    responsSucsess();
 }
 
 if($action == "addExample"){
@@ -146,6 +150,7 @@ if($action == "addExample"){
     $table = "Example";
     
     addRow($table,$name1,$name2,$par1,$par2);
+    responsSucsess();
 }
 
 if($action == "addReason"){
@@ -158,23 +163,28 @@ if($action == "addReason"){
     $table = "Reason";
     
     addRow($table,$name1,$name2,$par1,$par2);
+    responsSucsess();
 }
 //--------------------ifRemove
 if($action == "removeTopic"){
     $par1 = $_GET["par1"];
     removeTopic($par1);
+    responsSucsess(); 
 }
 if($action == "removeArgument"){
     $par1 = $_GET["par1"];
     removeArgument($par1);
+    responsSucsess();
 }
 if($action == "removeReason"){
     $par1 = $_GET["par1"];
     removeReason($par1);
+    responsSucsess();
 }
 if($action == "removeExample"){
     $par1 = $_GET["par1"];
     removeExample($par1);
+    responsSucsess();
 }
 //-----------------------------------Remove 
 

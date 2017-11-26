@@ -32,7 +32,7 @@ body{
     margin-right: 200px;
     margin-left: 10px;
     margin-bottom: 20px;
-    width: 80%;
+    width: 75%;
 }
 
 h1{
@@ -97,10 +97,7 @@ td{
     border-radius: 10px;    
 }
 
-a{
-    color: white;
-    text-decoration:none;
-}
+
 
 p{
     font-family: 'Quicksand', sans-serif;
@@ -141,12 +138,23 @@ label {
     margin-right: auto;
     font-family: 'Josefin Sans', sans-serif;
 }
+.link{
+    text-decoration: none;
+    color: white;
+}
+
 
 .procont{
     margin-top: -10px;
+    margin-bottom: 30px;
     text-align: center;
     font-family: 'Amatic SC', cursive;
     font-size: 40px;
+    background-color: #f4f6f9;
+    border-radius: 50%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .addargument{
@@ -162,28 +170,47 @@ label {
 
 .proarg{
     float: left;
-    background-color: f4f6f9;
+    background-color: #787A97;
+    margin-right: -10px;
+    margin-left: 20px;
 }
 .conarg{
     float: right;
-     background-color: f4f6f9;
+     background-color: #787A97;
+
 }
 
 .conarg,.proarg{
-    width: 40%;
-    margin: 10px;
+    width: 35%;
+    margin: 40px;
     display: inline-block;
-    padding: 20px;
+    padding: 25px;
+    border-radius: 5px;
 }
 
 
 
-#ProNeu{
-    margin-left: auto;
-    margin-right: auto;
+
+
+
+button{
+    margin:10px;
+    background-color: #787A97;
+    color: white;
 }
 
-#ConNeu{
-    margin-left: auto;
-    margin-right: auto;
+#contentcon,#contentpro{
+    background-color: #f4f6f9;
+    margin: 5px;
+    padding: 15px;
+    
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#ProNeu,#ConNeu{
+    text-align: center; 
 }

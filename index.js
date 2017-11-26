@@ -1,8 +1,8 @@
 function load_topics() {
     $.ajax({
         url: "handler.php?action=topic",
+        dataType :"json",
         success: function (result) {
-            result = JSON.parse(result);
             var Inhalt = $('#Inhalt');
             Inhalt.text('');
             for (i = 0; i < result.length; i++) {
@@ -10,9 +10,12 @@ function load_topics() {
                 Themen.addClass('Themen');
                 Inhalt.append(Themen);
                 var topic = $('<h1>');
+                var link = $('<a>');
+                link.attr("href", "themen.html?id="+result[i]['ID']);
                 topic.addClass('topic');
                 topic.text(result[i]['name']);
-                Themen.append(topic);
+                link.append(topic);
+                Themen.append(link);
                 var themenfrage = $('<p>');
                 themenfrage.addClass('themenfrage');
                 themenfrage.text(result[i]['question']);
