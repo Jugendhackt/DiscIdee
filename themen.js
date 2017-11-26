@@ -3,6 +3,38 @@ var focused = null;
 var text = null;
 function start_load_arguments(){
     load_arguments();
+    
+   /* $(window).scroll(function() {
+    
+    if(focused != null){
+        
+        var id = "#"+focused;
+        var hT = $(id).offset().top,
+        hH = $(id).outerHeight(),
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+        if ((wS > (hT+hH-wH))){
+            
+            console.log("drueber");
+        }
+        if (!(wS > (hT+hH-wH))){
+            alert('H1 on the view!');
+        }
+    }
+});*/
+
+   $(window).on('scroll', function() {
+        if(focused != null){
+            //var element_position = $("#"+focused).offset().top;
+            var element_position = $("#"+focused).position().top;
+            var y_scroll_pos = window.pageYOffset;
+            var scroll_pos_test = element_position;
+            if((y_scroll_pos > scroll_pos_test)||(y_scroll_pos < (scroll_pos_test-window.innerHeight))) {
+                focused = null;
+            }
+        }
+});
+    
     timer = setInterval(reloadTimer, 1000);
 }
 
@@ -43,12 +75,16 @@ function load_arguments() {
                 
                 var input = $('<input type="text" placeholder="Begründung" id="reason'+result['Argument'][i]['ID']+'">');
                 
+                input.click(function(){
+                    var id = $(this).attr('id');
+                    startTyping(id);
+                });
                 input.bind('input', function(){
                     //alert(result['Argument'][i]['ID']);
                     var id = $(this).attr('id');
                     startTyping(id);
                 });
-                input.inpu
+
                 
                 var button = $('<button type="submit" onclick="addReason('+result['Argument'][i]['ID']+')">');
                 button.text("Hinzufügen")
@@ -81,6 +117,9 @@ function load_arguments() {
 
     });
 }
+
+
+
 
 function add_pro_argument() {
 
@@ -129,6 +168,7 @@ function startTyping(inputID){
 
 
 function addReason(argumentID){
+    console.log($("#reason" + argumentID).val());
       $.ajax({
         url: "handler.php?action=addReason",
         data: {
@@ -137,6 +177,7 @@ function addReason(argumentID){
         },
         success: function (result) {
             load_arguments();
+            console.log("reload");
             
         }
     });
