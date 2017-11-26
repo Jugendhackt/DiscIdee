@@ -28,7 +28,6 @@ body{
 #inhalt {
     background-color: white;
     padding: 25px;
-    float: left;
     margin-right: 200px;
     margin-left: 10px;
     margin-bottom: 20px;
@@ -105,7 +104,7 @@ p{
 
 label {
     display: inline-block;
-    width: 100px;
+    width: 150px;
 }
 
 .titel {
@@ -216,4 +215,19 @@ a{
 
 #ProNeu,#ConNeu{
     text-align: center; 
+}
+.titlewrapper{
+    background-color:#f4f6f9;
+    margin-left:10px;
+    margin-right:200px;
+    width:74%;
+    padding:30px;
+    font-size:20px;
+}
+label{
+    font-family: 'Quicksand', sans-serif;
+    font-size:20px;
+}
+textarea{
+    font-family: 'Quicksand', sans-serif;
 }
